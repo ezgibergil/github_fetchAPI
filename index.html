@@ -1,0 +1,53 @@
+<!--github kullanıcılarını arayarak profillerini gösterecek bir uygulama geliştirin. 
+Kullanıcı adı girildiğinde fetch api ile kullanıcıların bilgilerini çekin ve profil fotoğrafını, biosunu ve takipçi sayısını gösterin.-->
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profil Arama</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .profile {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+            display: none;
+        }
+        .profile img {
+            max-width: 150px;
+            border-radius: 50%;
+        }
+        .profile h2 {
+            margin: 10px 0;
+        }
+        .profile p {
+            font-style: italic;
+            color: gray;
+        }
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>GitHub Kullanıcı Profili Arama</h1>
+    <input type="text" id="username" placeholder="GitHub Kullanıcı Adı">
+    <button id="searchButton">Ara</button>
+
+    <div id="errorMessage" class="error-message"></div>
+
+    <div id="profile" class="profile">
+        <img id="avatar" alt="Profil Fotoğrafı">
+        <h2 id="name"></h2>
+        <p id="bio"></p>
+        <p><strong>Takipçi Sayısı:</strong> <span id="followers"></span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
